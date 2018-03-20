@@ -18,8 +18,6 @@ public class TransferServiceImp implements TransferService {
     private SequenceService sequenceService;
     @Autowired
     private UserService userService;
-    @Autowired
-    private LogService logService;
     @Override
     public void transfer(int from, int to, double money, long seqId) {
           seqId = sequenceService.getSeqId();
@@ -28,7 +26,7 @@ public class TransferServiceImp implements TransferService {
         log.setFrom(from);
         log.setTo(to);
         log.setMoney(money);
-        logService.save()
+//        logService.save();
 //        userService
     }
 }
